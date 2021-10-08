@@ -1,0 +1,234 @@
+<html>
+<body>
+<h1> Mr Higgins: </h1>
+<h2> Information representation - Unit 1 </h2>
+<p>
+Binary is a base two number system. All computers use binary. 
+
+Advantages:
+Data can be transmitted easily and reliably. 
+Data can be stored and read very quickly.
+Computer circuits work well with binary.
+Input voltage of computers isn’t very stable, therefore only a system with two states can work well with PCs.
+Decimal prefix system: kilo, mega, giga, tera. We use this.
+Binary prefix system: kibi, mebi, gibi, tebi. Computers use this.
+
+In one’s complement the numbers are simply flipped to represent negative numbers. You can do addition of negative numbers with this, except you are always off by 1.
+In two’s complement, the MSB is present but negative, and all others are negative. 
+
+
+BCD (Binary Coded Decimal) is a type of binary representation where each denary number is individually converted to a binary nibble, instead of the entire denary number being converted. E.g. 10 would be 00010000 in BCD. 
+Advantages:
+Easier for humans to read
+Simpler to create hardware that only counts and performs simple calculations.
+Removes the problem of floating point rounding errors. 
+
+
+
+ASCII: represents text in computers so that computers can understand text, as computers can only understand binary. 
+Pros:
+Very easy to read and understand ASCII code
+Small storage and transmission size (7 bits for standard, 8 bits for extended)
+Cons:
+Only works for the english language and has a limited number of special characters.
+
+
+Extended ASCII (the ASCII with 8 bits):
+Pros:
+Includes more european characters and accents
+Cons:
+More storage space required.
+Still can’t support eastern characters.
+
+Unicode:
+Pros:
+Millions of different characters available due to larger number of bits per character (16 or 32)
+Cons:
+Way more storage per letter.
+
+
+
+Bitmap images are made up of pixels each of which take up 24 bits, 8 for red, 8 for green and 8 for blue, which means 2^24 = 16 million colours that can be represented. High storage requirements as the images are of high quality. Can use lossless or lossy compression to reduce file size. 
+
+Vector images are drawn using mathematical operations. 
+Advantages of vectors
+Smaller file size
+Easily scalable
+Great for logos, cartoons or other drawn items
+Disadvantages of vectors
+More difficult to draw and use
+Not appropriate for storing photos. 
+ 
+Learn how analogue sounds are converted to digital. 
+Factors that affect the quality of a sampled sound:
+Sampling rate - number of samples per second.
+Sampling resolution - number of bits used to represent each sample. Higher sampling resolution = more values of amplitude than can be sampled = higher quality.
+Quality of recording hardware
+Calculating file sizes:
+Size in Bits= Time x  Sampling Rate  x Sampling Resolution x Number of channels (Mono = 1, Stereo = 2)
+RLE and Huffman Encoding are forms of lossless compression.
+RLE: Groups the same colours/values together. Represents 5 black as 5B instead of BBBBB. 
+ 
+Huffman: Used to compress text files. Make a list of all characters in the text file, from most used to least used. Join the two least used with the joining header being the sum of their frequencies. Now adjust the position of this new joined character in the list. Repeat this until all characters are joined together. You will get a big complex tree. To find the binary value of any character, follow the path from the top of the tree to the required character. Count each left as a 0 and right as a 1. The letters at the bottom of the tree require a high number of bits, but this is fine as they aren’t used very often. 
+</p>
+
+
+
+
+
+
+<h1> Mr Hill </h1>
+<h2>Communication - Unit 2</h2>
+<h2>2.1 Networks including the Internet</h2>
+<p>
+Purpose of networking of devices
+LAN vs WAN
+A LAN is a client-server network based in a single location. They are usually in a single building or a cluster of buildings. 
+A WAN is a network that is based over a wide geographical area which consists of multiple LANs connected to each other using a bridge/modem. This allows devices to:
+Share access to devices such as printers
+Share file access across multiple LANs
+Share access to a single Internet service
+
+Client-Server vs Peer to Peer
+Client-Server:
+A server provides services to clients in a network. These services include:
+File Storage
+Hardware sharing
+Internet access
+User authentication
+A client provides a workstation for network users to use. It accesses and uses the services provided by the server. When a user uses a client, they are usually provided with access to:
+A private file storage area
+A shared file storage
+The internet and the organization’s intranet
+Hardware resources such as printers.
+Peer-to-Peer:
+Advantages: Since the network is decentralized, it is harder to take down as each node operates independently. If one point of service goes down, the others still operate. 
+Disadvantages: Illegal or unwanted activity often occurs because the networks are harder to control. 
+Examples include the Internet and Ad-hoc Networks.
+Thin and Thick Clients
+Thin clients are designed to interact with a server. All of their data is stored on the cloud and they have limited functionality as most features do not function when they are not connected to the network. 
+Advantages:
+Cheaper to purchase than thick clients as they have less hardware
+Software is faster and easier to upgrade as the upgrade configured to the server can be easily pushed down to the client
+More secure as there are fewer locally installed programs, which means there are fewer attack vectors.
+Disadvantages:
+Useless when not connected to a network
+CPU/GPU intensive software will not work well 
+If the central network goes down, all devices cease to function
+Thick clients function like a standard computer, where all processing occurs in the computer itself. 
+Advantages:
+Can largely retain their functionality when not connected to the Internet.
+No network related lag as they don’t rely on external servers to process tasks.
+More adaptable to different uses as software can be installed locally.
+Disadvantages:
+More expensive to purchase and maintain
+Less secure as installed software can be compromised 
+Software updates are harder to implement
+
+Network Topologies
+A network topology shows the arrangement of devices in a network. 
+Logical Topology: How elements are connected in principle
+Physical Topology: How elements are actually plugged together in reality.
+Bus Topology: Uses a single trunk cable that runs between all nodes in the network.
+Advantages:
+Quick to set up
+Cheap to implement
+Disadvantages:
+If there is a break in the cable, the network goes down
+The main cable can have bandwidth issues
+Ring topology: All computers have two network connectors and each connector runs either clockwise or anticlockwise onto the next node. 
+Advantages:
+Simple to set up
+Cheap to install
+Disadvantages:
+If one cable breaks the entire network goes down.
+Mesh topology: No specific structure. Each node can connect to any other node. Two types, full and partial mesh. Peer to peer networks are usually logical mesh networks. 
+Advantages:
+Easy to set up
+No central point of network failure
+Disadvantages:
+Difficult to manage and troubleshoot.
+Star topology: All devices connected to a central server. 
+Advantages:
+If cable breaks, only connected device loses network access
+Easy to maintain and debug
+Client Server model allow centralized management of all devices
+Disadvantages:
+More expensive as it requires more hardware
+Hybrid topologies are adapted to the particular needs of a network. The strengths and weaknesses are a mixture of the topologies that make up the network.
+Cloud Computing
+Cloud storage is when files are stored offsite on multiple internet connected servers. The files are stored on multiple servers so that you can access your files from the server with the lowest latency. This also means that if one server goes down, you can access your files from other servers, and that if one server becomes corrupt, your files can be restored from other copies.
+Advantages:
+Access to files whenever you are connected to internet
+Cheaper backup
+Automatic backup
+Easy to share files
+Easy to scale storage
+Disadvantages:
+Data is less secure
+Data is in the hands of a third party
+No idea where data is physically stored
+Internet connection necessary
+Cloud software is software that is run entirely or partly on offsite servers, accessed usually via your web browser.
+Advantages:
+No need for expensive GPU for video editing
+Software updates are handled invisibly
+Lower upfront costs than standard software
+Don’t have to install the software
+Disadvantages:
+You don’t own the software, you pay regular subscriptions, costs can accumulate.
+Need internet connection, usually with high speed.
+A public cloud is when data is stored on third-party offsite servers e.g. google drive. 
+Advantages:
+Don’t need to pay for expensive servers and employees to run the servers
+Very easy to scale server requirements in response to consumer demand.
+A private cloud is when a company has its own offsite servers to which employees connect to access files and software.
+Advantages:
+More secure
+Customization
+
+Wired and Wireless Networks
+Wired forms include copper and fibre. Copper is cheaper and malleable. Fibre is faster, more efficient, has higher bandwidth, and has less data loss which means that data can be transmitted over longer distances. 
+Wireless forms include Radio waves (can bounce off of the upper atmosphere which means transmission further than visible sight), Microwaves(Line of sight so limited distance of 40-50 miles. WiFI and Bluetooth have lower frequencies of 2.4 Ghz which allows some penetration through walls) and Satellite technology(Used in tandem with microwaves to transmit them globally). 
+Network Hardware
+Router - forwards packets between networks. They are not always gateways as the two networks may not  be dissimilar. 
+Gateway - entry/exit point for data travelling between two dissimilar networks. They are always routers.
+Servers - provide services to other devices on the network e.g. file server, web server (provides web page access), proxy server (anonymity in networks),  and authentication server (decides whether to authorise your login request when you try to login to a network). 
+Switch: forwards data packets within the network itself. Reduce wiring requirements. Operates in the data link layer and forwards data using MAC addresses rather than IP addresses. 
+Hub: Same as switch, but forwards data to all other ports instead of just the intended recipient. 
+NIC: allows devices to connect to a network. Can be wired (Ethernet NIC) or wireless (Wifi/Bluetooth) . Each NIC has a unique MAC address.
+Bridge: connects two LANs together.
+Repeater: boosts incoming signal to increase the distance the data can travel. 
+Ethernet
+Network routing and collisions(CSMA/CD)
+CSMA/CD(Carrier Sense Multiple Access/Collision Detection) - verifies no other node is transmitting before sending data along cable. Terminate transmission of collision detected. Steps:
+Node checks to see if data is being transmitted
+If not signal detected it sends data
+If it senses a signal, it waits until the data has finished being sensed.
+If a collision is detected the node stops sending, sends out a jamming signal to notify that a collision has occurred. The node then waits a random amount of time to transmit again.
+CSMA/CA(Carrier Sense Multiple Access/Collision Avoidance) - collision protocol used in wireless networks. Node listens for transmission before sending data. If all the data has been received, the recipient sends an acknowledgement of this to the sender. If the sender does not receive the acknowledgement, the process restarts. 
+Bit Streaming
+A bit stream is a continuous flow of bits over a communication path. 
+Real-time bit streaming is when data is retrieved live from the source as it is being created. Cannot be paused or rewinded as any data that isn’t immediately used is discarded. 
+Features: Low latency is prioritised over quality. If data cannot be reliably streamed at current bit rate, then a lower bit rate and quality is used. 
+Used for: live gaming, video streaming, live sport television broadcasts.
+On Demand bit streaming is used to transmit pre recorded data. The player buffers (waits and accumulates packets) until the data can be streamed at the pre-selected bit rate.
+	Features: Data integrity is priorities over latency. IF there is insufficient bandwidth to handle bit stream, buffering will occur and output will pause or drop frames until the bandwidth increases or a lower bit rate is selected. 
+	Used for: Movie playback, video streaming sites such as YouTube. 
+Steps for On Demand:
+Connect to media server
+Choose appropriate video file 
+Server starts sending bits
+Fill the buffer to above minimum mark
+Start playing video
+If the high water mark is reached, data flow is paused. 
+If the buffer is completely emptied, the computer will pause playback until the minimum mark is reached again. 
+
+WWW and the Internet
+The Internet: massive interconnected collection of LANs and WANs.
+The WWW is a massively distributed application that is hosted on the internet. Made up of web pages (which contain hyperlinks) which form a web of interlinked pages. Users can browse servers and move seamlessly between one internet server to another without having to manually connect and disconnect. 
+Internet Hardware
+</p>
+
+</body>
+</html>
